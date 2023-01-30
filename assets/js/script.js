@@ -3,34 +3,15 @@ $(function () {
 
   // Individual buttons for each timeblock's texct input and save button. Should be easier to organize instead of running for loops and verifying selection.
   var am9BtnEl = document.querySelector("#am9Btn");
-  var am9EventEl = document.getElementById("#am9Event");
-  
   var am10BtnEl = document.querySelector("#am10Btn");
-  var am10EventEl = document.querySelector("#am10Event");
-
   var am11BtnEl = document.querySelector("#am11Btn");
-  var am11EventEl = document.querySelector("#am11Event");
-
   var pm12BtnEl = document.querySelector("#pm12Btn");
-  var pm12EventEl = document.querySelector("#pm12Event");
-
   var pm1BtnEl = document.querySelector("#pm1Btn");
-  var pm1EventEl = document.querySelector("#pm1Event");
-
   var pm2BtnEl = document.querySelector("#pm2Btn");
-  var pm2EventEl = document.querySelector("#pm2Event");
-
   var pm3BtnEl = document.querySelector("#pm3Btn");
-  var pm3EventEl = document.querySelector("#pm3Event");
-
   var pm4BtnEl = document.querySelector("#pm4Btn");
-  var pm4EventEl = document.querySelector("#pm4Event");
-
   var pm5BtnEl = document.querySelector("#pm5Btn");
-  var pm5EventEl = document.querySelector("#pm5Event");
     
-
-
   // Time display in header with date. Time will be used to keep planner colour coordination up to date.
   const timeDisplayEl = $('#currentDay');
 
@@ -41,9 +22,11 @@ $(function () {
 
 
 
+  ////////// Functions //////////
+
   // Clock and Date function, allows it to be periodically updated every 1000 ms
   function displayTime() {
-    var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
+    var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm a');
     timeDisplayEl.text(rightNow);
   }
 
@@ -88,7 +71,9 @@ $(function () {
 
 
 
+
     
+  ////////// Event Listeners //////////
 
   ////////// 9 am Input Save and Button Listener //////////
   // Retrieves the locally saved value of the 9 am events
@@ -233,14 +218,4 @@ $(function () {
     localStorage.setItem("pm5Event", JSON.stringify(savedEvent));
     console.log(JSON.parse(localStorage.getItem("pm5Event")));
   });
-
-
-
-
-
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
 });
