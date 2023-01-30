@@ -87,17 +87,8 @@ $(function () {
     pastPresFuture();
 
 
-    // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
 
-
-
-
-
+    
 
   ////////// 9 am Input Save and Button Listener //////////
   // Retrieves the locally saved value of the 9 am events
@@ -108,7 +99,7 @@ $(function () {
   am9BtnEl.addEventListener("click", function () {
 
     // Saves the current input value of the timeblock and saves it in a variable
-    var savedEvent = document.getElementById("am9Event").value;
+    let savedEvent = document.getElementById("am9Event").value;
 
     // Saves the text input to local storage
     localStorage.setItem("am9Event", JSON.stringify(savedEvent));
@@ -124,7 +115,7 @@ $(function () {
   am10BtnEl.addEventListener("click", function () {
   
     // Saves the current input value of the timeblock and saves it in a variable
-    var savedEvent = document.getElementById("am10Event").value;
+    let savedEvent = document.getElementById("am10Event").value;
   
     // Saves the text input to local storage
     localStorage.setItem("am10Event", JSON.stringify(savedEvent));
@@ -140,17 +131,113 @@ $(function () {
   am11BtnEl.addEventListener("click", function () {
 
     // Saves the current input value of the timeblock and saves it in a variable
-    var savedEvent = document.getElementById("am11Event").value;
+    let savedEvent = document.getElementById("am11Event").value;
 
     // Saves the text input to local storage
     localStorage.setItem("am11Event", JSON.stringify(savedEvent));
     console.log(JSON.parse(localStorage.getItem("am11Event")));
   });
 
+  ////////// 12 pm Input Save and Button Listener //////////
+  // Retrieves the locally saved value of the 12 pm events
+  pm12SavedEvent = JSON.parse(localStorage.getItem("pm12Event"));
+  document.getElementById("pm12Event").innerHTML = pm12SavedEvent;
+
+  // Event Listener for the "Save" button and ties it to input text field for the event
+  pm12BtnEl.addEventListener("click", function () {
+
+    // Saves the current input value of the timeblock and saves it in a variable
+    let savedEvent = document.getElementById("pm12Event").value;
+
+    // Saves the text input to local storage
+    localStorage.setItem("pm12Event", JSON.stringify(savedEvent));
+    console.log(JSON.parse(localStorage.getItem("pm12Event")));
+  });
+
+  ////////// 1 pm Input Save and Button Listener //////////
+  // Retrieves the locally saved value of the 1 pm events
+  pm1SavedEvent = JSON.parse(localStorage.getItem("pm1Event"));
+  document.getElementById("pm1Event").innerHTML = pm1SavedEvent;
+
+  // Event Listener for the "Save" button and ties it to input text field for the event
+  pm1BtnEl.addEventListener("click", function () {
+
+    // Saves the current input value of the timeblock and saves it in a variable
+    let savedEvent = document.getElementById("pm1Event").value;
+
+    // Saves the text input to local storage
+    localStorage.setItem("pm1Event", JSON.stringify(savedEvent));
+    console.log(JSON.parse(localStorage.getItem("pm1Event")));
+  });
+
+  ////////// 2 pm Input Save and Button Listener //////////
+  // Retrieves the locally saved value of the 2 pm events
+  pm2SavedEvent = JSON.parse(localStorage.getItem("pm2Event"));
+  document.getElementById("pm2Event").innerHTML = pm2SavedEvent;
+
+  // Event Listener for the "Save" button and ties it to input text field for the event
+  pm2BtnEl.addEventListener("click", function () {
+
+    // Saves the current input value of the timeblock and saves it in a variable
+    let savedEvent = document.getElementById("pm2Event").value;
+
+    // Saves the text input to local storage
+    localStorage.setItem("pm2Event", JSON.stringify(savedEvent));
+    console.log(JSON.parse(localStorage.getItem("pm2Event")));
+  });
+
+  ////////// 3 pm Input Save and Button Listener //////////
+  // Retrieves the locally saved value of the 3 pm events
+  pm3SavedEvent = JSON.parse(localStorage.getItem("pm3Event"));
+  document.getElementById("pm3Event").innerHTML = pm3SavedEvent;
+
+  // Event Listener for the "Save" button and ties it to input text field for the event
+  pm3BtnEl.addEventListener("click", function () {
+
+    // Saves the current input value of the timeblock and saves it in a variable
+    let savedEvent = document.getElementById("pm3Event").value;
+
+    // Saves the text input to local storage
+    localStorage.setItem("pm3Event", JSON.stringify(savedEvent));
+    console.log(JSON.parse(localStorage.getItem("pm3Event")));
+  });
+
+  ////////// 4 pm Input Save and Button Listener //////////
+  // Retrieves the locally saved value of the 4 pm events
+  pm4SavedEvent = JSON.parse(localStorage.getItem("pm4Event"));
+  document.getElementById("pm4Event").innerHTML = pm4SavedEvent;
+
+  // Event Listener for the "Save" button and ties it to input text field for the event
+  pm4BtnEl.addEventListener("click", function () {
+
+    // Saves the current input value of the timeblock and saves it in a variable
+    let savedEvent = document.getElementById("pm4Event").value;
+
+    // Saves the text input to local storage
+    localStorage.setItem("pm4Event", JSON.stringify(savedEvent));
+    console.log(JSON.parse(localStorage.getItem("pm4Event")));
+  });
+
+  ////////// 5 pm Input Save and Button Listener //////////
+  // Retrieves the locally saved value of the 5 pm events
+  pm5SavedEvent = JSON.parse(localStorage.getItem("pm5Event"));
+  document.getElementById("pm5Event").innerHTML = pm5SavedEvent;
+
+  // Event Listener for the "Save" button and ties it to input text field for the event
+  pm5BtnEl.addEventListener("click", function () {
+
+    // Saves the current input value of the timeblock and saves it in a variable
+    let savedEvent = document.getElementById("pm5Event").value;
+
+    // Saves the text input to local storage
+    localStorage.setItem("pm5Event", JSON.stringify(savedEvent));
+    console.log(JSON.parse(localStorage.getItem("pm5Event")));
+  });
 
 
 
-  
+
+
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
